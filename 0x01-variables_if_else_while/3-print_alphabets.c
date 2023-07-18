@@ -10,20 +10,20 @@
 
 int main(void)
 {
-        char small = 'a';
+	char small = 'a';
 	char cap = 'A';
 
-        while (small <= 'z')
-        {
-                putchar(small);
-                small++;
-        }
+	while (small <= 'z')
+	{
+		putchar(small);
+		small++;
+	}
 	while (cap <= 'Z')
-        {
-                putchar(cap);
-                cap++;
-        }
-        putchar('\n');
+	{
+		putchar(cap);
+		cap++;
+	}
+	putchar('\n');
 
-        return (0);
+	return (0);
 }
