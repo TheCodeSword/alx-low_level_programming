@@ -12,6 +12,8 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
+	int i;
+
 	/**
 	 * iterate through src array
 	 * where if there is no null bytes
