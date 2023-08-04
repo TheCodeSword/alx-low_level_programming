@@ -11,12 +11,12 @@
 
 int square(int n, int root)
 {
-        if (root * root == n)
-                return (root);
-        else if (root * root < n)
-                return (square(n, root + 1));
-        else
-                return (-1);
+	if (root * root == n)
+		return (root);
+	else if (root * root < n)
+		return (square(n, root + 1));
+	else
+		return (-1);
 }
 
 /**
