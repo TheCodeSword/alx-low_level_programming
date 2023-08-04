@@ -3,23 +3,20 @@
 /**
  * test - test if the number is prime number
  * @n: the number
- * @f1: factor 1
- * @f2: factor 2
+ * @f: factor
  *
  * Return: 1 if prime number
  *		0 if not
 */
 
-int test(int n, int f1, int f2)
+int test(int n, int f)
 {
-	if (f2 > (n / 2))
+	if (f >= n && n >= 2)
 		return (1);
-	if (f1 * f2 == n || n <= 1)
+	if (n % f == 0 || n <= 1)
 		return (0);
-	else if (f1 * f2 < n)
-		return (test(n, f1 + 1, f2));
-	else if (f1 * f2 > n)
-		return (test(n, 2, f2 + 1));
+	else
+		return (test(n, f + 1));
 }
 
 /**
@@ -32,5 +29,5 @@ int test(int n, int f1, int f2)
 
 int is_prime_number(int n)
 {
-	return (test(n, 2, 2));
+	return (test(n, 2));
 }
