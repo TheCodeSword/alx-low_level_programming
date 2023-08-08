@@ -14,6 +14,7 @@
 char *_strdup(char *str)
 {
 	int size = 0;
+	char *n;
 
 	while (str[size] != '\0')
 	{
@@ -21,7 +22,7 @@ char *_strdup(char *str)
 		str++;
 	}
 
-	char *n = malloc(size * sizeof(*str) + 1);
+	n = malloc(size * sizeof(*str) + 1);
 
 	if (size == 0 || n == 0)
 	{
@@ -29,7 +30,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		for (; i < size; i++)
+		for (int i = 0; i < size; i++)
 			n[i] = str[i];
 	}
 	return (n);
