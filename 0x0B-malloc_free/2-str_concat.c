@@ -36,11 +36,11 @@ char *str_concat(char *s1, char *s2)
 	if (n == 0)
 		return (0);
 
-		for (; i < size1; i++)
-			n[i] = s1[i];
+	for (; i < size1; i++)
+		n[i] = s1[i];
 
-		for (; j < size2; j++)
-			n[i + j] = s2[j];
+	for (; j < size2; j++)
+		n[i + j] = s2[j];
 
 	n[i + j] = '\0';
 	return (n);
